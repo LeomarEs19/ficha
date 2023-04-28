@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ES_es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Ficha Técnica</title>
+</head>
+<body>
+    <div class="container" id="container">
+
+        <h1>Ficha tecnica del producto</h1>
+        <div class="card-caracteristicas">
+            <h2>Caracteristicas del producto</h2>
+            <div class="row-form">
+                <label for="name_produ  ct">Nombre del producto</label>
+                <input type="text" name="name_product" id="name_product" placeholder="Nombre del producto">
+            </div>
+            <div class="row-form">
+                <label for="line_product">Línea del producción</label>
+                <input type="text" name="line_product" id="line_product" placeholder="Línea del producto">
+            </div>
+            <div class="row-form">
+                <label for="version_before">Versiones anteriores</label>
+                <input type="number" name="version_before" id="version_before" placeholder="Versiones anteriores">
+            </div>
+            <div class="row-form">
+                <label for="version_after">Versión actual</label>
+                <input type="number" name="version_after" id="version_after" placeholder="Versión actual">
+            </div>
+            <div class="row-form">
+                <label for="module_product">Módulo</label>
+                <input type="number" name="module_product" id="module_product" placeholder="Módulo">
+            </div>
+        </div>
+        <div class="descripcion-producto">
+            <h2>Descripción del producto</h2>
+            <div class="row-form">
+                <label for="desc-product">Descripción general del producto</label>
+                <textarea name="desc-product" id="desc-product" cols="30" rows="10" placeholder="Descripción general"></textarea>
+            </div>
+        </div>
+        <div class="arquitectura">
+            <h2>Arquitectura</h2>
+            <div class="row-form">
+                <label for="arq-product">Descripción</label>
+                <input type="text" name="arq-product" id="arq-product" placeholder="Descripción de la arquitectura del producto">
+            </div>
+        </div>
+        <div class="requirements-product">
+            <div class="row">
+                <h3>Requisitos del sistema (servidor)</h3>
+                <div class="row-form">
+                    <label for="hardware">Hardware</label>
+                    <input type="text" id="hardware" name="hardware" placeholder="Hardware mínimo para el servidor">
+                </div>
+                <div class="row-form">
+                    <label for="software">Software</label>
+                    <input type="text" id="software" name="software" placeholder="Software mínimo para el servidor">
+                </div>
+                <div class="row-form">
+                    <label for="others">Otros</label>
+                    <input type="text" id="others" name="others" placeholder="Otros requisitos mínimos para el servidor">
+                </div>
+            </div>
+            <div class="row">
+                <h3>Requisitos del sistema (cliente)</h3>
+                <div class="row-form">
+                    <label for="hardware-client">Hardware</label>
+                    <input type="text" id="hardware-client" name="hardware-client" placeholder="Hardware mínimo que debe tener el cliente">
+                </div>
+                <div class="row-form">
+                    <label for="software-client">Software</label>
+                    <input type="text" id="software-client" name="software-client" placeholder="Software mínimo que debe tener el cliente">
+                </div>
+                <div class="row-form">
+                    <label for="others-client">Otros</label>
+                    <input type="text" id="others-client" name="others-client" placeholder="Otros requisitos mínimos que debe tener el cliente">
+                </div>
+            </div>
+        </div>
+        <div class="requirements">
+            <h2>Requeremientos</h2>
+            <div class="row-form">
+                <label for="funcional-requirements">Requerimientos funcionales</label>
+                <input type="text" name="funcional-requirements" id="funcional-requirements" placeholder="Funciones de el sistema realizará">
+            </div>
+            <div class="row-form">
+                <label for="adicional-requirements">Requerimientos adicionales</label>
+                <input type="text" name="adicional-requirements" id="adicional-requirements" placeholder="Funciones adicionales que puede hacer el sistema">
+            </div>
+            <div class="row-form">
+                <label for="clients-products">Clientes del producto</label>
+                <input type="text" name="clients-products" id="clients-products" placeholder="Caracteristicas del cliente">
+            </div>
+        </div>
+        <button type="submit" onclick="getFicha()">Generar ficha</button>
+    </div>
+    <div id="successTable">
+        <h1>Ficha Técnica</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Descripciones</th>
+                    <th>Información</th>
+                </tr>
+            </thead>
+            <tbody id="informationTable">
+
+            </tbody>
+        </table>
+        <a href="index.html">Volver</a>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
